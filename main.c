@@ -1,9 +1,7 @@
 #include "libasm.h"
 
-int     main(void)
+int     main(int ac, char **av)
 {
-    char p[40]= "0000akdjsfj";
-
-    printf("%s\n", ft_strdup("akdjsfj"));
+    printf("%d\n", ft_strcmp(av[1], av[2]));
     return (0);
 }

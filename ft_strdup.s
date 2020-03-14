@@ -6,7 +6,7 @@
 #    By: malaoui <malaoui@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/13 13:27:40 by malaoui           #+#    #+#              #
-#    Updated: 2020/03/13 13:32:15 by malaoui          ###   ########.fr        #
+#    Updated: 2020/03/14 15:22:58 by malaoui          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,8 +22,7 @@ _ft_strdup :
     inc rax
     mov rdi, rax
     call _malloc
-    pop rdi 
-    mov rsi, rdi
+    pop rsi 
     mov rdi, rax
     call _ft_strcpy
     ret

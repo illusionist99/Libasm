@@ -6,7 +6,7 @@
 #    By: malaoui <malaoui@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/03/13 12:41:36 by malaoui           #+#    #+#              #
-#    Updated: 2020/03/13 13:13:41 by malaoui          ###   ########.fr        #
+#    Updated: 2020/03/14 15:39:33 by malaoui          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ _ft_strcmp :
     mov rax, 0
     mov r10, 0
     mov r11, 0
+    
 
 loop:
     movzx r10, byte [rdi]
@@ -28,6 +29,6 @@ loop:
     jmp loop
 
 end :
-    mov rax, r10
+    movsx rax, r10w
     sub rax, r11
     ret
