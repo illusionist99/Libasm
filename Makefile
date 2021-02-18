@@ -22,7 +22,7 @@ $(NAME) :
 	@nasm $(FLAGS) ft_strcpy.s
 	@ar -rc $(NAME) ft_read.o ft_strcmp.o ft_write.o ft_strdup.o ft_strlen.o ft_strcpy.o
 	@ranlib $(NAME)
-	gcc main.c $(NAME)
+	#gcc main.c $(NAME)
 
 clean :
 	rm -rf  $(OBG)
@@ -30,5 +30,4 @@ clean :
 fclean : clean
 	rm -rf $(NAME)
 
-re : clean all
-
+re : fclean all

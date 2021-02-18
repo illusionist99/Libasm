@@ -1,27 +1,22 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    ft_strlen.s                                        :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: malaoui <malaoui@student.42.fr>            +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2020/03/13 12:49:15 by malaoui           #+#    #+#              #
-#    Updated: 2020/03/13 13:13:02 by malaoui          ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+section     .text
+global      _ft_strlen
 
-section .text
-global  _ft_strlen
 
-_ft_strlen :
-    xor rcx, rcx
+_ft_strlen:
+    xor		rax, rax
+	xor		rcx, rcx
+	cmp		BYTE [rdi], 0
+	je		return
+	call 	l1
+	ret
 
-loop :
-    cmp BYTE [rdi + rcx], 0
-    je end
-    inc rcx
-    call loop
+l1:
+	cmp		BYTE [rdi + rcx], 0
+	je		return
+	inc 	rcx
+	call 	l1
 
-end :
-    mov rax, rcx
-    ret
+return:
+	mov rax, rcx
+	ret
+	
