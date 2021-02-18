@@ -20,7 +20,7 @@ $(NAME) :
 	@nasm $(FLAGS) ft_strdup.s
 	@nasm $(FLAGS) ft_strlen.s
 	@nasm $(FLAGS) ft_strcpy.s
-	@ar -rc $(NAME) ft_read.o ft_strcmp.o ft_write.o ft_strdup.o ft_strlen.o ft_strcpy.o
+	@ar -rc $(NAME) $(OBG)
 	@ranlib $(NAME)
 
 clean :
